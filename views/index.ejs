@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Compressor</title>
-  </head>
-  <body>
-    <div class="Container flex" id="form">
-      <input type="file" class="FileInput" id="file" />
-    </div>
-    <script src="./js/script.js"></script>
-  </body>
-</html>
+<%- include('components/header') %>
+<div class="Container flex" id="form">
+  <div class="info" id="FileInfo">
+
+  </div>
+  <label for="file" id="label"
+    ><i class="fas fa-plus"></i> Upload files to Compress</label
+  >
+  <input type="file" class="FileInput" id="file" multiple />
+  <div class="flex box" id="btnBox">
+    <button class="btn" id="submit">Generate</button>
+    <button class="btn red" id="cancel">Cancel</button>
+  </div>
+</div>
+<div class="flex">
+  <img src="./logo-black.png" alt="logo-black" class="logo-black" />
+</div>
+<script src="./js/script.js"></script>
+<%- include('components/footer') %>

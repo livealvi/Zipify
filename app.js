@@ -65,11 +65,16 @@ app.get("/error", (req, res) => {
 app.post("/compress", async (req, res) => {
   var zip = new JSZip();
   req.body.file.forEach((file) => {
-    zip.file(
-      file,
-      fs.readFileSync(path.join(__dirname, `public/temp/${file}`)),
-      { base64: true }
-    );
+    file.split(".")[1] === "txt"
+      ? zip.file(
+          file,
+          fs.readFileSync(path.join(__dirname, `public/temp/${file}`))
+        )
+      : zip.file(
+          file,
+          fs.readFileSync(path.join(__dirname, `public/temp/${file}`)),
+          { base64: true }
+        );
   });
   await zip.generateAsync({ type: "nodebuffer" }).then(function (content) {
     fs.writeFile("./public/temp/example.zip", content, (error) => {
