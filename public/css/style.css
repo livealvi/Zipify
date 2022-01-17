@@ -9,6 +9,8 @@
   --secondary-font: "Mochiy Pop P One", sans-serif;
   --primary-color: #5800ff;
   --secondary-color: #000;
+  --success:rgba(0, 214, 0, 0.767);
+  --error:rgb(182, 3, 3);
 }
 html {
   overflow-x: hidden;
@@ -23,7 +25,7 @@ body {
   align-items: center;
 }
 .red{
-  background-color: red !important;
+  background-color: var(--error) !important;
 }
 .navbar {
   width: 100%;
@@ -87,7 +89,7 @@ label:hover{
   margin: 40px auto;
 }
 .error {
-  background-color: rgba(182, 3, 3, 0.678);
+  background-color: var(--error);
 }
 .btn {
 

@@ -4,12 +4,11 @@ const cancel = document.getElementById("cancel");
 const BtnBox = document.getElementById("btnBox");
 const FormLabel = document.getElementById("label");
 const FileInfo = document.getElementById("FileInfo");
-
+const Container =document.getElementById('form')
 
 // UPLOADED FILES
-let AllFiles = localStorage.getItem("Files") || [];
-
-
+let AllFiles = JSON.parse(localStorage.getItem("Files")) || [];
+console.log(AllFiles)
 // UPDATE UI
 const updateUI = (is) => {
   if (is) {
@@ -46,8 +45,6 @@ const uploadFiles = async (file) => {
 file.addEventListener("change", (event) => {
   const Files = event.target.files;
   const len = Object.keys(Files).length;
-  let AllFiles = localStorage.getItem("Files") || [];
-  console.log(len);
   for (let i = 0; i < len; i++) {
     AllFiles.push(Files[i].name);
     uploadFiles(Files[i]);
@@ -72,6 +69,7 @@ submit.addEventListener("click", () => {
     .then((res) => {
       console.log(res);
       if (res.status === "Success") {
+        Container.style.backgroundColor='var(--success)'
         window.location.href = `/success/${res.file.split(".")[0]}`;
       } else {
         window.location.href = `/error`;
