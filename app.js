@@ -67,7 +67,8 @@ app.post("/compress", async (req, res) => {
   req.body.file.forEach((file) => {
     zip.file(
       file,
-      fs.readFileSync(path.join(__dirname, `public/temp/${file}`), "utf8")
+      fs.readFileSync(path.join(__dirname, `public/temp/${file}`)),
+      { base64: true }
     );
   });
   await zip.generateAsync({ type: "nodebuffer" }).then(function (content) {
