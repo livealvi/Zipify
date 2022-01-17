@@ -13,13 +13,10 @@ file.addEventListener("change", (event) => {
       return res.json();
     })
     .then((res) => {
-      console.log(res);
-    })
-    .then(() => {
       fetch("http://localhost/compress", {
         method: "POST",
         body: JSON.stringify({
-          file: {},
+          file: res.files,
         }),
         headers: {
           "Content-Type": "application/json",

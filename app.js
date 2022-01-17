@@ -25,7 +25,12 @@ const Storage = multer.diskStorage({
 const Upload = multer({ storage: Storage });
 
 app.post("/Upload", Upload.single("file"), (req, res) => {
-  res.status(200).json("File has been Uploaded");
+  fs.readdir(path.join(__dirname, `public/temp/`), (err, files) => {
+    if (err) console.log(err);
+    else {
+      res.status(200).json({ status: "Success", files: files });
+    }
+  });
 });
 
 /*************** ****************/
@@ -57,25 +62,15 @@ app.get("/error", (req, res) => {
   res.render("error");
 });
 
-app.post("/compress", (req, res) => {
+app.post("/compress", async (req, res) => {
   var zip = new JSZip();
-  zip.file(
-    "FileCompressor.txt",
-    "These Files are compressed using File Compressor"
-  );
-  fs.readdir(path.join(__dirname, `public/temp`), (err, files) => {
-    if (err) {
-      console.log(err);
-    } else {
-      for (const file of files) {
-        zip.file(
-          file,
-          fs.readFileSync(path.join(__dirname, `public/temp/${file}`), "utf8")
-        );
-      }
-    }
+  req.body.file.forEach((file) => {
+    zip.file(
+      file,
+      fs.readFileSync(path.join(__dirname, `public/temp/${file}`), "utf8")
+    );
   });
-  zip.generateAsync({ type: "nodebuffer" }).then(function (content) {
+  await zip.generateAsync({ type: "nodebuffer" }).then(function (content) {
     fs.writeFile("./public/temp/example.zip", content, (error) => {
       if (error) {
         return res.json({
