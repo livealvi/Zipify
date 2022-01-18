@@ -5,10 +5,19 @@ const BtnBox = document.getElementById("btnBox");
 const FormLabel = document.getElementById("label");
 const FileInfo = document.getElementById("FileInfo");
 const Container = document.getElementById("form");
+const b_btn = document.querySelectorAll(".b-btn");
+
+b_btn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    index == 0
+      ? b_btn[1].classList.remove("active")
+      : b_btn[0].classList.remove("active");
+    btn.classList.add("active");
+  });
+});
 
 // UPLOADED FILES
 let AllFiles = JSON.parse(localStorage.getItem("Files")) || [];
-console.log(AllFiles);
 // UPDATE UI
 const updateUI = (is) => {
   if (is) {
@@ -56,7 +65,13 @@ file.addEventListener("change", (event) => {
 });
 
 submit.addEventListener("click", () => {
-  fetch("http://localhost/compress/zipper", {
+  let target = "http://localhost/compress/error";
+  if (b_btn[0].classList.contains("active")) {
+    target = "http://localhost/compress/zipper";
+  } else {
+    target = "http://localhost/compress/File";
+  }
+  fetch(target, {
     method: "POST",
     body: JSON.stringify({
       file: JSON.parse(localStorage.getItem("Files")),
@@ -69,7 +84,6 @@ submit.addEventListener("click", () => {
       return res.json();
     })
     .then((res) => {
-      console.log(res);
       if (res.status === "Success") {
         Container.style.backgroundColor = "var(--success)";
         window.location.href = `/success/${res.file}`;
