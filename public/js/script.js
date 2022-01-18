@@ -56,7 +56,7 @@ file.addEventListener("change", (event) => {
 });
 
 submit.addEventListener("click", () => {
-  fetch("http://localhost/compress", {
+  fetch("http://localhost/compress/zipper", {
     method: "POST",
     body: JSON.stringify({
       file: JSON.parse(localStorage.getItem("Files")),
@@ -72,7 +72,7 @@ submit.addEventListener("click", () => {
       console.log(res);
       if (res.status === "Success") {
         Container.style.backgroundColor = "var(--success)";
-        window.location.href = `/success`;
+        window.location.href = `/success/${res.file}`;
       } else {
         window.location.href = `/error`;
       }
