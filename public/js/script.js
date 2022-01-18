@@ -34,7 +34,10 @@ const updateUI = (is) => {
 };
 
 // Clear Files
-const ClearFiles = () => {
+const ClearFiles = async () => {
+  await fetch("http://localhost/unlink", {
+    method: "DELETE",
+  });
   localStorage.clear();
   updateUI(false);
 };

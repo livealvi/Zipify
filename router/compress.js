@@ -73,7 +73,7 @@ route.post("/File", async (req, res) => {
         });
       });
     });
-  } catch (err) {
+  } catch (error) {
     return res.status(400).json({
       status: "Error",
       error: error,
