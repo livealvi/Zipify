@@ -77,7 +77,7 @@ app.post("/compress", async (req, res) => {
         );
   });
   await zip.generateAsync({ type: "nodebuffer" }).then(function (content) {
-    fs.writeFile("./public/temp/example.zip", content, (error) => {
+    fs.writeFile("./public/temp/Compress.zip", content, (error) => {
       if (error) {
         return res.json({
           status: "Error",

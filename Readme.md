@@ -1,1 +1,5 @@
-# Online File compressor
+# Zipify
+
+<img src="./zipify-poster.png" alt='zipify-poster'/>
+
+---
