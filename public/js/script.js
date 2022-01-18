@@ -40,6 +40,7 @@ const ClearFiles = async () => {
   });
   localStorage.clear();
   updateUI(false);
+  AllFiles = [];
 };
 
 // UPLOAD FILES TO THE SERVER
@@ -88,10 +89,12 @@ submit.addEventListener("click", () => {
     })
     .then((res) => {
       if (res.status === "Success") {
-        Container.style.backgroundColor = "var(--success)";
+        document.querySelector("body").classList.remove("error");
+        document.querySelector("body").classList.add("success");
         window.location.href = `/success/${res.file}`;
       } else {
-        window.location.href = `/error`;
+        document.querySelector("body").classList.remove("success");
+        document.querySelector("body").classList.add("error");
       }
     });
   ClearFiles();

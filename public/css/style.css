@@ -24,8 +24,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-.red {
-  background-color: var(--error) !important;
+button {
+  letter-spacing: 3px;
+  font-family: var(--secondary-font);
 }
 .navbar {
   width: 100%;
@@ -47,7 +48,7 @@ body {
 .Container {
   position: relative;
   width: 80vw;
-  height: 350px;
+  height: 400px;
   background-color: var(--primary-color);
   margin: 20px auto;
   color: white;
@@ -61,7 +62,7 @@ label {
   cursor: pointer;
   font-size: 30px;
   margin: 30px auto;
-  padding: 20px;
+  padding: 15px 50px;
   border-radius: 5px;
   border: 2px solid transparent;
   -webkit-border-radius: 5px;
@@ -70,7 +71,7 @@ label {
   -o-border-radius: 5px;
 }
 label:hover {
-  border: 2px solid white;
+  border: 2px dotted white;
 }
 #file {
   display: none;
@@ -86,11 +87,9 @@ label:hover {
   -o-border-radius: 50%;
 }
 .logo-black {
-  margin: 40px auto;
+  margin: 30px auto;
 }
-.error {
-  background-color: var(--error);
-}
+
 .btn {
   bottom: 20px;
   margin: 30px 10px;
@@ -113,7 +112,6 @@ label:hover {
 }
 .b-btn {
   cursor: pointer;
-  font-family: var(--secondary-font);
   font-size: 20px;
   padding: 20px 20px;
   margin: 20px;
@@ -141,4 +139,10 @@ a {
   font-family: var(--secondary-font);
   font-size: 30px;
   margin: 20px auto;
+}
+.success {
+  --primary-color: rgba(0, 143, 0, 0.767);
+}
+.error {
+  --primary-color: rgb(182, 3, 3);
 }
