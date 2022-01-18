@@ -39,8 +39,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/success/:fileName", (req, res) => {
-  res.sendFile(path.join(__dirname, `public/temp/${req.params.fileName}.zip`));
+app.get("/success", (req, res) => {
+  res.sendFile(path.join(__dirname, `public/temp/Compress.zip`));
   setTimeout(() => {
     fs.readdir(path.join(__dirname, `public/temp/`), (err, files) => {
       if (err) console.log(err);
@@ -86,7 +86,7 @@ app.post("/compress", async (req, res) => {
       } else {
         return res.json({
           status: "Success",
-          file: "example.zip",
+          file: "Compress.zip",
         });
       }
     });

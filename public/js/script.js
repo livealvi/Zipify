@@ -36,7 +36,7 @@ const uploadFiles = async (file) => {
     const data = new FormData();
     data.append("FileName", file.name);
     data.append("file", file);
-    await fetch("https://obscure-bastion-31262.herokuapp.com/Upload", {
+    await fetch("http://localhost/Upload", {
       method: "POST",
       body: data,
     });
@@ -56,7 +56,7 @@ file.addEventListener("change", (event) => {
 });
 
 submit.addEventListener("click", () => {
-  fetch(" https://obscure-bastion-31262.herokuapp.com/compress", {
+  fetch("http://localhost/compress", {
     method: "POST",
     body: JSON.stringify({
       file: JSON.parse(localStorage.getItem("Files")),
@@ -72,7 +72,7 @@ submit.addEventListener("click", () => {
       console.log(res);
       if (res.status === "Success") {
         Container.style.backgroundColor = "var(--success)";
-        window.location.href = `/success/${res.file.split(".")[0]}`;
+        window.location.href = `/success`;
       } else {
         window.location.href = `/error`;
       }
