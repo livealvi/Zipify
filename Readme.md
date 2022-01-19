@@ -1,8 +1,4 @@
-<p align="center">
-
 # Zipify
-
-</p>
 
 <img src="./zipify-poster.png" alt='zipify-poster'/>
 
@@ -11,6 +7,14 @@
 ## ScreenShot
 
 <img src="./screenshot.png" alt='zipify-screenshot'/>
+
+---
+
+# Working
+
+<img src="./working-poster.png" alt="working-poster">
+
+---
 
 # Setup
 
@@ -25,8 +29,4 @@
 
 ---
 
-<p align="center">
-
 ## Show some ❤️ by staring ⭐️ this repository
-
-</p>
