@@ -33,9 +33,7 @@
 
 <h1 align=center> Project Admin ❤️ </h1>
 <p align="center">
-  <a href="https://github.com/Ayush7614"><img src="https://avatars.githubusercontent.com/u/67006255?s=400&u=c0e16c3bba31328a028cfcca4b1fa7599509f905&v=4" width=150px height=150px /></a>
-
-  <a href="https://github.com/pulkit-30"><img src="https://avatars.githubusercontent.com/u/76155456?v=4" width=150px height=150px /></a>
+  <a href="https://github.com/Ayush7614"><img src="https://avatars.githubusercontent.com/u/67006255?s=400&u=c0e16c3bba31328a028cfcca4b1fa7599509f905&v=4" width=150px height=150px /></a> + <a href="https://github.com/pulkit-30"><img src="https://avatars.githubusercontent.com/u/76155456?v=4" width=150px height=150px /></a>
 
 </p>
 
