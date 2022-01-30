@@ -1,18 +1,18 @@
 # Zipify
 
-<img src="./zipify-poster.png" alt='zipify-poster'/>
+<img src="./images/zipify-poster.png" alt='zipify-poster'/>
 
 ---
 
 ## ScreenShot
 
-<img src="./screenshot.png" alt='zipify-screenshot'/>
+<img src="./images/screenshot.png" alt='zipify-screenshot'/>
 
 ---
 
 # Working
 
-<img src="./working-poster.png" alt="working-poster">
+<img src="./images/working-poster.png" alt="working-poster">
 
 ---
 
@@ -28,5 +28,3 @@
 </ul>
 
 ---
-
-[![Powered by Vercel](./images/powered-by-vercel.svg)](https://vercel.com?utm_source=Zipify&utm_campaign=oss/)
