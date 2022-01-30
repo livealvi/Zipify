@@ -1,6 +1,6 @@
 # Setup
 
-To setup this project to your local system follow these steps :- </p>
+To setup this project to your local system follow these steps :-
 
 * Clone code using `git clone https://github.com/MetaVASP/Zipify.git`
 * run ` npm install ` to install all node_modules
