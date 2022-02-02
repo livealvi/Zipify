@@ -66,10 +66,21 @@ At last, you're ready to propose changes into the main project! This is the fina
 
 **Step 1**:head on over to the repository on GitHub where your project lives. For this example, it would be at `https://www.github.com/HarryPotter/hogwarts`. You'll see a banner indicating that your branch is one commit ahead of `main`. Click Contribute and then Open a pull request.
 
+![image contribute](https://docs.github.com/assets/cb-26570/images/help/pull_requests/pull-request-start-review-button.png) 
+
 **Step 2**: GitHub will bring you to a page that shows the differences between your fork and the main repository. Click Create pull request.
+- In the "base branch" drop-down menu, select the branch of the upstream repository you'd like to merge changes into.
+![image base repo](https://docs.github.com/assets/cb-44606/images/help/pull_requests/choose-base-fork-and-branch.png)
+- In the "head fork" drop-down menu, select your fork, then use the "compare branch" drop-down menu to select the branch you made your changes in.
+  ![image compare repo](https://docs.github.com/assets/cb-43627/images/help/pull_requests/choose-head-fork-compare-branch.png)
 
-**Step 3**: GitHub will bring you to a page where you can enter a title and a description of your changes. It's important to provide as much useful information and a rationale for why you're making this pull request in the first place. The project owner needs to be able to determine whether your change is as useful to everyone as you think it is. Finally, click Create pull request.
+**Step 3**: GitHub will bring you to a page where you can enter a title and a description of your changes. It's important to provide as much useful information and a rationale for why you're making this pull request in the first place.
+![image desc](https://docs.github.com/assets/cb-28826/images/help/pull_requests/pullrequest-description.png)
+**Step 4**:The project owner needs to be able to determine whether your change is as useful to everyone as you think it is.
 
+ Finally, click Create pull request.
+
+![create pull request](https://docs.github.com/assets/cb-26223/images/help/pull_requests/pullrequest-send.png)
 ### Contribute in other ways
 ####Opening an issue
 Opening an issue in the following situations is feasable
@@ -82,4 +93,4 @@ Tips for Communicating a issue
 * If an issue was opened a while ago, it’s possible that it’s being addressed somewhere else, or has already been resolved, so comment to ask for confirmation before starting work.
 * If you opened an issue, but figured out the answer later on your own, comment on the issue to let people know, then close the issue. Even documenting that outcome is a contribution to the project.
 
-
+to learn more click [here](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue).
