@@ -35,11 +35,11 @@ Note that you do not need to be a master in VCS/Git/GitHub to start contributing
    > `git clone https://github.com/HarryPotter/hogwarts.git`
 
 5. Press `Enter`. Your local clone will be created.
-    > Cloning into `hogwarts`...
-    > remote: Counting objects: 10, done.
-    > remote: Compressing objects: 100% (8/8), done.
-    > remove: Total 10 (delta 1), reused 10 (delta 1)
-    > Unpacking objects: 100% (10/10), done.
+    > Cloning into `hogwarts`... \
+    > remote: Counting objects: 10, done.\
+    > remote: Compressing objects: 100% (8/8), done. \
+    > remove: Total 10 (delta 1), reused 10 (delta 1) \
+    > Unpacking objects: 100% (10/10), done.  
 
 You are good to start working on your project from your favourite Text Editor.
 
@@ -82,7 +82,7 @@ At last, you're ready to propose changes into the main project! This is the fina
 
 ![create pull request](https://docs.github.com/assets/cb-26223/images/help/pull_requests/pullrequest-send.png)
 ### Contribute in other ways
-####Opening an issue
+####     Opening an issue
 Opening an issue in the following situations is feasable
 * Report an error in the project
 * discuss a upgrade or any new idea that can be implemented
