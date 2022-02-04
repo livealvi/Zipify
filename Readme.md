@@ -48,3 +48,8 @@ to run the **server** and server will run at **PORT 80** , Open your browser and
 <img src="./images/working-poster.png" alt="working-poster">
 
 ---
+# Contributors
+
+<a href="https://github.com/MetaVASP/Zipify/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MetaVASP/Zipify" />
+</a>
